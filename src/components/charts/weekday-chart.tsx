@@ -1,0 +1,90 @@
+"use client";
+
+import React from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+} from "recharts";
+import { useTrading } from "@/context/trading-context";
+import ChartContainer from "@/components/ui/chart-container";
+import { formatCurrency } from "@/lib/utils";
+
+export default function WeekdayChart() {
+  const { weekdayStats } = useTrading();
+
+  const data = weekdayStats.map((d) => ({
+    day: d.day.slice(0, 3),
+    pnl: Number(d.pnl.toFixed(2)),
+    trades: d.trades,
+    winRate: Number(d.winRate.toFixed(1)),
+  }));
+
+  return (
+    <ChartContainer
+      title="Performance by Day of Week"
+      subtitle="Weekday P&L breakdown"
+    >
+      <div className="h-[250px]">
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={data} margin={{ top: 5, right: 5, bottom: 5, left: 5 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#1e2130" vertical={false} />
+            <XAxis
+              dataKey="day"
+              tick={{ fontSize: 11, fill: "#e2e8f0" }}
+              axisLine={false}
+              tickLine={false}
+            />
+            <YAxis
+              tick={{ fontSize: 10, fill: "#64748b" }}
+              tickFormatter={(val) => formatCurrency(val, 0)}
+              axisLine={false}
+              tickLine={false}
+              width={55}
+            />
+            <Tooltip
+              content={({ active, payload }) => {
+                if (!active || !payload?.length) return null;
+                const d = payload[0].payload;
+                return (
+                  <div className="bg-card border border-border rounded-lg p-3 shadow-xl">
+                    <p className="text-xs font-semibold mb-1">{d.day}</p>
+                    <p
+                      className={`text-sm font-bold ${
+                        d.pnl >= 0 ? "text-green-400" : "text-red-400"
+                      }`}
+                    >
+                      {formatCurrency(d.pnl)}
+                    </p>
+                    <div className="flex gap-3 mt-1">
+                      <p className="text-xs text-muted-foreground">
+                        {d.trades} trades
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        WR: {d.winRate}%
+                      </p>
+                    </div>
+                  </div>
+                );
+              }}
+            />
+            <Bar dataKey="pnl" radius={[4, 4, 0, 0]} maxBarSize={32}>
+              {data.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={entry.pnl >= 0 ? "#00d4aa" : "#ef4444"}
+                  fillOpacity={0.8}
+                />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </ChartContainer>
+  );
+}
