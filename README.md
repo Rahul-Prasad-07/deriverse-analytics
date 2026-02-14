@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Deriverse Analytics
+# Deriverse Analytics
 
 ### Institutional-grade trading analytics for [Deriverse](https://deriverse.io) protocol
 
@@ -15,7 +15,7 @@
 
 ---
 
-## ✨ What Is This?
+## What Is This?
 
 A professional trading dashboard for **Deriverse** — the fully on-chain decentralized trading protocol on Solana. Track performance, analyze strategies, manage risk, and optimize your trading with institutional-grade analytics.
 
@@ -25,21 +25,21 @@ Built with Next.js 16, TypeScript, and Recharts. **58 files · 18 charts · 7 pa
 
 ---
 
-## 🔥 Key Features
+## Key Features
 
-### 📊 **Analytics Engine**
+### **Analytics Engine**
 - **18 Interactive Charts** — Equity curves, P&L distribution, correlation heatmaps, hourly patterns
 - **15 Metrics** — Sharpe, Sortino, Calmar, VaR, Kelly Criterion, Profit Factor, Win Rate
 - **Risk Health Score** — 0-100 composite grade (A+ to F) with animated circular gauge
 - **Strategy Breakdown** — Momentum, Mean Reversion, Breakout, Scalping performance
 
-### 📔 **Trading Journal**
+### **Trading Journal**
 - **Full Trade History** — Sortable table with 300+ mock trades across 10 Solana pairs
 - **Trade Detail Modal** — Click any trade for complete breakdown (P&L, fees, R:R, MAE/MFE, Solscan link)
 - **Multi-Filter Panel** — Filter by symbol, side, strategy, P&L range, date
 - **CSV/JSON Export** — Download filtered data for offline analysis
 
-### 🎨 **UX Innovation**
+### **UX Innovation**
 - **⌘K Command Palette** — Fuzzy search pages, symbols, metrics with keyboard navigation
 - **⌘1-6 Quick Nav** — Jump to any page instantly
 - **Live Price Ticker** — Scrolling real-time feed with mini-sparklines
@@ -49,7 +49,7 @@ Built with Next.js 16, TypeScript, and Recharts. **58 files · 18 charts · 7 pa
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Framework:** Next.js 16.1.6 (App Router + Turbopack)  
 **Language:** TypeScript 5 with 25+ interfaces  
@@ -61,7 +61,7 @@ Built with Next.js 16, TypeScript, and Recharts. **58 files · 18 charts · 7 pa
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone
@@ -87,7 +87,7 @@ vercel deploy --prod
 
 ---
 
-## 📊 Pages Overview
+## Pages Overview
 
 | Page | Route | Features |
 |:-----|:------|:---------|
@@ -100,7 +100,7 @@ vercel deploy --prod
 
 ---
 
-## 🏆 Why This Stands Out
+## Why This Stands Out
 
 1. **Institutional Math** — 15 analytics functions (Sharpe, Sortino, Calmar, VaR, Kelly) implemented correctly with proper edge case handling
 
@@ -114,7 +114,7 @@ vercel deploy --prod
 
 ---
 
-## 📊 Mock Data
+## Mock Data
 
 **300 realistic trades** across 10 Solana pairs (SOL, WBTC, WETH, BONK, JTO, PYTH, JUP, RNDR, HNT, RAY)  
 **90 days history** · **4 strategies** · **Seed=42** for reproducible demos  
@@ -122,21 +122,21 @@ vercel deploy --prod
 
 ---
 
-## 🔗 Links
+##  Links
 
-**🌐 Live:** https://deriverse-analytics-azure.vercel.app  
-**📦 GitHub:** https://github.com/Rahul-Prasad-07/deriverse-analytics  
-**📖 Deriverse:** https://deriverse.io | https://docs.deriverse.io
+** Live:** https://deriverse-analytics-azure.vercel.app  
+** GitHub:** https://github.com/Rahul-Prasad-07/deriverse-analytics  
+** Deriverse:** https://deriverse.io | https://docs.deriverse.io
 
 ---
 
-## 📄 License
+## License
 
 MIT — Built for the Deriverse community on Solana
 
 <div align="center">
 
-**⭐ Star this repo if you find it useful!**
+**  Star this repo if you find it useful!**
 
 Made by [Rahul Prasad](https://github.com/Rahul-Prasad-07)
 
